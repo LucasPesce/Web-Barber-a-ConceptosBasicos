@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form>                                                      <!-- Crea un formulario. -->
+                <label for="nombreapellido">Nombre y Apellido</label>   <!-- Crea un titulo para la caja de usuario. *for: vincula el texto con la caja de usuario -->
+                <input type="text" id="nombreapellido" class="input-padron" required>   <!-- Crea una caja de usuario para ingresar datos.-->
+
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+                <!--Tipo de dato para casillas email. Mejora experiencia de usuario mobil
+                    Requerid: vuelve obligatorio un campo. 
+                    Placehokder: muestra un ejemplo de dato al usuario.-->
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                    <!--Tipo de dato para casillas telefono. Mejora experiencia de usuario mobil-->
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+                    <!-- Caja de texto regulable para ingreso de datos. COLUMNAS. FILAS. (Cambia el tamaño predefinido de la caja)-->
+                
+                <fieldset>                                                      <!-- ETIQUETA ORGANIZATIVA. Etiqueta que agrupa itemps del mismo grupo-->
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>      <!--legend (leyenda). Etiqueta que escribie contenido, mas propio de fieldset-->
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                        <!-- type "radio": Crea un circulo de seleccion para el usuario. Algun valor del input-->
+                        <!-- *name provoca que solo se pueda elegir una de las opciones dadas del mismo input.-->
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                        <!--Checked: deja como predefinido esta opcion-->
+                    
+                </fieldset>
+               
+                <fieldset>
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select>                                                    <!-- Crea menu desplegable para seleccionar una opcion-->
+                        <option>Mañana</option>                                 <!-- Crea una opcion del menu desplegable -->
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+                
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+                    <!--chekbox crea una casilla de marcacion para el usuario.-->
+                    <!--checked deja tildada la casilla de manera predeterminada-->
+                                
+                
+                <input type="submit" value="Enviar formulario" class="enviar">  <!-- Boton de enviar. *value: permite personalizar lo escrito en el boton-->
+
+            </form>
+
+            <table>                         <!-- Genera una tabla-->
+                <thead>                     <!-- ETIQUETA ORGANIZATIVA. Contenido de la tabla--> 
+                    <tr>                    <!-- Definimos una filas de la tabla-->
+                        <th>Día</th>        <!-- Definimos una celda en la fila del encabezado de la tabla-->
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>                    <!-- Definimos una filas de la tabla-->
+                        <td>Lunes</td>      <!-- Definimos cada celda en esa fila de la tabla-->
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>
+                <!--tfoot es una ETIQUETA ORGANIZATIVA. Para las celdas finales de la tabla-->
+            </table>
+        </main>
+        <footer>
+            <img src="imagenes/logo-blanco.png"  alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2020</p>
+        </footer>
+    </body>
+</html>
